@@ -63,3 +63,5 @@ else{
     console.log("please refresh this page for a new selection, then review selection and type yes in order to confirm that you like all selections");
 }
 
+console.log("Your completed trip is displayed above.");
+
