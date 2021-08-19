@@ -9,3 +9,20 @@ function random_destination(items){
 }
 let items =["New York", "Miami", "Tampa", "Atlanta", "Virginia Beach"];
 console.log(random_destination(items));
+
+function random_restaurant(itemsR){
+    
+    return itemsR[Math.floor(Math.random() * itemsR.length)];
+    
+}
+let itemsR =["Red Lobster", "Olive Garden", "Smokey Bones", "Pops Diner", "Burger King"];
+console.log(random_restaurant(itemsR));
+
+function random_transportation(itemsT){
+    
+    return itemsT[Math.floor(Math.random() * itemsT.length)];
+    
+}
+let itemsT =["Uber", "Lyft", "Taxi", "Walk", "Horse Carriage"];
+console.log(random_transportation(itemsT));
+
