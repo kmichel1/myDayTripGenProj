@@ -8,7 +8,8 @@ function random_destination(items){
     
 }
 let items =["New York", "Miami", "Tampa", "Atlanta", "Virginia Beach"];
-console.log(random_destination(items));
+let selectedDest = random_destination(items);
+console.log(selectedDest);
 
 function random_restaurant(itemsR){
     
@@ -16,7 +17,8 @@ function random_restaurant(itemsR){
     
 }
 let itemsR =["Red Lobster", "Olive Garden", "Smokey Bones", "Pops Diner", "Burger King"];
-console.log(random_restaurant(itemsR));
+let selectedRest = random_restaurant(itemsR);
+console.log(selectedRest);
 
 function random_transportation(itemsT){
     
@@ -24,7 +26,8 @@ function random_transportation(itemsT){
     
 }
 let itemsT =["Uber", "Lyft", "Taxi", "Walk", "Horse Carriage"];
-console.log(random_transportation(itemsT));
+let selectedTrans = random_transportation(itemsT)
+console.log(selectedTrans);
 
 function random_entertainment(itemsE){
     
@@ -32,7 +35,8 @@ function random_entertainment(itemsE){
     
 }
 let itemsE =["Movies", "Live Jazz Band", "Circus", "Dancing with the stars!", "Opera"];
-console.log(random_entertainment(itemsE));
+let selectedEnt = random_entertainment(itemsE);
+console.log(selectedEnt);
 
 /* Randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment 
 if I don’t like one or more of those things. */
@@ -42,12 +46,20 @@ happyWithSelection = "yes";
 
 let user1 = prompt("Are you happy with the console log selections? ")
 
-if(user1 === happyWithSelection){
+if(user1 == happyWithSelection){
     console.log("Great! Hope you enjoy your trip!");
 }
 else{
-    console.log("please refresh this page for a new selection");
+    selectedDest = random_destination(items);
+    selectedRest = random_restaurant(itemsR);
+    selectedTrans = random_transportation(itemsT);
+    selectedEnt = random_entertainment(itemsE);
+    console.log(`Your new trip is ${selectedDest}. You will be eating at ${selectedRest}. You will be traveling using ${selectedTrans}.
+     Your entertainment will be ${selectedEnt}`);
 }
+
+
+
 
 /* confirm that my day trip is “complete” once I like all of the random selections. */
 
