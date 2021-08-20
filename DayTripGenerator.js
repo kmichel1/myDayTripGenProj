@@ -42,24 +42,23 @@ console.log(selectedEnt);
 if I don’t like one or more of those things. */
 
 let happyWithSelection;
-happyWithSelection = "yes";
+happyWithSelection = "no";
 
-let user1 = prompt("Are you happy with the console log selections? ")
-
-if(user1 == happyWithSelection){
+while(happyWithSelection === "no"){
+    let user1 = prompt("Are you happy with the console log selections?")
+    if(user1 === "yes"){
     console.log("Great! Hope you enjoy your trip!");
+    happyWithSelection = "yes";
 }
-else{
+    else{
     selectedDest = random_destination(items);
     selectedRest = random_restaurant(itemsR);
     selectedTrans = random_transportation(itemsT);
     selectedEnt = random_entertainment(itemsE);
     console.log(`Your new trip is ${selectedDest}. You will be eating at ${selectedRest}. You will be traveling using ${selectedTrans}.
-     Your entertainment will be ${selectedEnt}`);
+     Your entertainment will be ${selectedEnt}`)
 }
-
-
-
+}
 
 /* confirm that my day trip is “complete” once I like all of the random selections. */
 
